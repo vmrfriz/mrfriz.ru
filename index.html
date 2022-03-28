@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-разработчик @vmrfriz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        body { background-color: #edeef0; }
+        a { text-decoration: none; }
+        .hero-bg {
+            background-image: linear-gradient(to top, #000000aa, #000000aa), url(assets/img/my-desktop.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .site-footer {
+            background: rgb(30,20,0);
+            padding: 15px 0;
+            text-align: center;
+        }
+        .site-footer a { color: #ccc; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+
+    <header class="hero-bg py-5 text-white">
+        <div class="container my-5 py-5">
+            <h1 class="display-4 fw-bold lh-base text-center my-5 py-5"><u>Программный код</u> сэкономит ваш<span class="typed"></span><br>защитит от человеческого фактора.<br>А я <u>напишу его для Вас</u></h1>
+            <p class="text-end">Это моё рабочее место :)</p>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <h2 class="display-4 text-center my-5 py-5">Какие у Вас запросы?</h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-4 text-center mb-5">
+                <h2>Битрикс24</h2>
+                <p class="text-muted small mb-0">настройка, интеграция с веб-приложениями штатными инструментами и по API</p>
+                <button class="popper btn mx-auto" aria-describedby="popper1">
+                    примеры задач
+                    <svg class="header__icon-phone" width="20" height="20">
+                        <use xlink:href="#i_question"></use>
+                    </svg>
+                </button>
+                <div id="popper1" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
+                    <ul class="mb-0 ps-3">
+                        <li>отправка SMS по достижению стадии сделки в CRM</li>
+                        <li>звонки через стороннюю телефонию из интерфейса Битрикс24 с использованием гарнитуры</li>
+                        <li>информирование руководителю в Telegram о просроченной обработке лида менеджером</li>
+                        <li>отчёты с гибкой настройкой условий и формата, используя API Битрикс24</li>
+                        <li>бизнес-процесс согласования документов по иерархии</li>
+                        <li>бизнес-процесс трудоустройства и увольнения сотрудника с онлайн-обходным списком</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 text-center mb-5">
+                <h2>Парсинг</h2>
+                <p class="text-muted small mb-0">однократное или регулярное получение информации с сайтов и веб-приложений в структурированном виде, дальнейшая обработка</p>
+                <button class="popper btn mx-auto" aria-describedby="popper2">
+                    примеры задач
+                    <svg class="header__icon-phone" width="20" height="20">
+                        <use xlink:href="#i_question"></use>
+                    </svg>
+                </button>
+                <div id="popper2" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
+                    <ul class="mb-0 ps-3">
+                        <li>сбор товаров, оценок, отзывов о товаре с заранее определённого списка источников</li>
+                        <li>уведомления об изменениях на сайте. Например, при появлении нового товара/новости</li>
+                        <li>сбор данных из профилей пользователей, проголосовавших определённым образом в голосовании социальной сети</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 text-center mb-5">
+                <h2>Документы и таблицы</h2>
+                <p class="text-muted small mb-0">разработка инструментов обработки/редактирования файлов .doc, .docx (Microsoft Word), .xls, .xlsx (Microsoft Excel), .pdf (Adobe Reader), .rtf, .txt, .json, .xml, .yml, других текстовых форматов</p>
+                <button class="popper btn mx-auto" aria-describedby="popper3">
+                    примеры задач
+                    <svg class="header__icon-phone" width="20" height="20">
+                        <use xlink:href="#i_question"></use>
+                    </svg>
+                </button>
+                <div id="popper3" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
+                    <ul class="mb-0 ps-3">
+                        <li>сбор прайс-листов поставщика, формирование собственного прайс-листа с наценками в зависимости от типа товара</li>
+                        <li>добавление в CRM задач HR-специалисту о звонке кандидатам, чьи резюме пришли на почту</li>
+                        <li>формирование договора, счёта с печатью и подписью</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 text-center mb-5">
+                <h2>Интеграции</h2>
+                <p class="text-muted small mb-0">в основном, работа с API веб-приложений с целью автоматизировать передачу информации и запуск действий веб-приложений по условию</p>
+                <button class="popper btn mx-auto" aria-describedby="popper4">
+                    примеры задач
+                    <svg class="header__icon-phone" width="20" height="20">
+                        <use xlink:href="#i_question"></use>
+                    </svg>
+                </button>
+                <div id="popper4" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
+                    <ul class="mb-0 ps-3">
+                        <li>отправка заявки в службу доставки при переходе товара на определённую стадию учётной системы</li>
+                        <li>вывод ключевых показателей отдела для онлайн-мониторинга на экране в офисе</li>
+                        <li>публикация товаров или передача заявок на сайты партнёров</li>
+                        <li>разработка API и Webhook для партнёров, чтобы те могли мгновенно передавать заявки, цены, публиковать товары, другое</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 text-center mb-5">
+                <h2>Диагностика и правки</h2>
+                <p class="text-muted small mb-0">исправление интерфейсных и функциональных недоработок сайтов и скриптов</p>
+                <button class="popper btn mx-auto" aria-describedby="popper5">
+                    примеры задач
+                    <svg class="header__icon-phone" width="20" height="20">
+                        <use xlink:href="#i_question"></use>
+                    </svg>
+                </button>
+                <div id="popper5" class="card bg-dark text-white p-3 small text-start" style="max-width:100%" role="tooltip" hidden>
+                    <ul class="mb-0 ps-3">
+                        <li>исправление работы кнопок, полей ввода, форм, отображения текстов, цветов, другое</li>
+                        <li>оптимизация скорости загрузки сайта путём сжатия медиа файлов, размера кода, исключения неиспользуемого кода, кэширования</li>
+                        <li>установка счётчиков Яндекс.Метрики и Google Analytics, Google Tag Manager</li>
+                        <li>настройка веб-сервера, регулярных заданий, версий ПО (linux)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--
+    # Я - фрилансер. Но!
+    ... не берусь за всё подряд. Я кайфую, избавляя людей от рутины и расширяя их возможности своим кодом. Расскажите мне о своих проблемах и, если я в этом силён, буду рад помочь. В свободное время могу взять незначительные правки, не приносящие явной пользы.
+    [форма]
+
+    # Мои навыки
+    Я позиционирую себя как специалиста. Мне неприятно работать с теми, кто знает лучше меня как делается моя работа. Если Вы чётко понимаете под какой стек нужен специалист, посмотрите моё резюме и мой github.
+
+    # Отзывы, оценки, портфолио
+    Кто мне платил, те не возмущались. Не знаю откуда у всех такие красивые отзывы. Обычно довольные клиенты пишут только "Спасибо", "Приятно иметь дело". С 2017 года через меня прошло всего два-три десятка клиентов. До этого я даже не думал, что свои навыки можно продавать частным лицам.
+
+    Контакты
+-->
+
+    <div class="container py-5 my-5">
+        <h2 class="display-3 text-center">Контакты</h2>
+        <div class="text-center">
+            Telegram: <a href="#" id="tg">@loading</a>
+        </div>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <a href="https://github.com/vmrfriz" target="_blank">Сайт сделан @vmrfriz</a>
+        </div>
+    </footer>
+
+
+    <!--[ scripts ]-->
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="i_question" viewBox="0 0 226 226"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,226v-226h226v226z" fill="none"></path><g><path d="M207.16667,113c0,51.99883 -42.16783,94.16667 -94.16667,94.16667c-51.99883,0 -94.16667,-42.16783 -94.16667,-94.16667c0,-51.99883 42.16783,-94.16667 94.16667,-94.16667c51.99883,0 94.16667,42.16783 94.16667,94.16667z" fill="#2196f3"></path><path d="M111.86058,146.64104c-3.42296,0 -6.25267,1.10175 -8.46088,3.34762c-2.20821,2.22704 -3.30996,5.05675 -3.30996,8.49854c0,3.38529 1.08292,6.18204 3.23933,8.38554c2.17054,2.20821 5.00496,3.30996 8.55033,3.30996c3.53125,0 6.36567,-1.10175 8.53621,-3.30996c2.15171,-2.20821 3.23933,-5.00496 3.23933,-8.38554c0,-3.43708 -1.10175,-6.2715 -3.30996,-8.49854c-2.19408,-2.20821 -5.085,-3.34762 -8.48442,-3.34762zM137.408,68.67575c-5.72062,-4.98613 -13.73892,-7.46742 -24.07842,-7.46742c-10.24533,0 -18.33896,2.63196 -24.25733,7.87233c-5.60762,4.96729 -8.588,11.78967 -8.95525,20.37767h-0.07533v4.70833h21.1875l0.03767,-3.30996c0.09417,-3.87967 1.23358,-6.93537 3.40412,-9.13887c2.15171,-2.22704 5.05675,-3.32879 8.66333,-3.32879c7.61338,0 11.40358,4.10096 11.40358,12.32171c0,2.72142 -0.71567,5.31571 -2.18937,7.75933c-1.45488,2.44833 -4.39758,5.62646 -8.80929,9.54379c-4.41642,3.8985 -7.44858,7.87233 -9.10592,11.89796c-1.67146,4.02562 -2.50012,9.82158 -2.50012,16.62512h18.73917l0.29662,-4.81662c0.53204,-4.76483 2.65079,-8.90346 6.36567,-12.45354l5.94192,-5.60762c4.61417,-4.46821 7.87233,-8.53621 9.71329,-12.19458c1.85979,-3.67721 2.79675,-7.57571 2.79675,-11.6955c-0.02825,-9.08238 -2.87679,-16.10721 -8.57858,-21.09333z" fill="#e3f2fd"></path></symbol>
+    </svg>
+
+    <script>
+        let tg = document.getElementById('tg');
+        if (tg) {
+            tg.href = 'tg:' + '//res' + 'olve?' + 'domain' + '=vm' + 'rfriz';
+            tg.innerText = 'vm' + 'rfri' + 'z';
+        }
+    </script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        Array.from(document.getElementsByClassName('popper')).forEach(function (elem) {
+            let tooltip = elem.nextElementSibling;
+
+            let popperInstance = Popper.createPopper(elem, elem.nextElementSibling, {
+                placement: 'bottom',
+            });
+
+            function show() {
+                tooltip.removeAttribute('hidden');
+                popperInstance.update();
+            }
+
+            function hide() {
+                tooltip.setAttribute('hidden', 'hidden');
+            }
+
+            const showEvents = ['mouseenter', 'focus'];
+            const hideEvents = ['mouseleave', 'blur'];
+
+            showEvents.forEach((event) => {
+                elem.addEventListener(event, show);
+            });
+
+            hideEvents.forEach((event) => {
+                elem.addEventListener(event, hide);
+            });
+        });
+
+        new Typed('.typed', {
+            strings: ['е время,', 'и деньги,'],
+            typeSpeed: 20,
+            backSpeed: 20,
+            cursorChar: '_',
+            backDelay: 3000,
+            loop: true
+        });
+    </script>
+</body>
+</html>
