@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Веб-разработчик @vmrfriz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://unpkg.com/swiper@8/swiper-bundle.min.css" rel="stylesheet">
 
     <style>
         body { background-color: #edeef0; }
@@ -16,12 +17,68 @@
             background-position: center center;
             background-repeat: no-repeat;
         }
+        @media (max-width: 767px) {
+            .swiper-example-slide {
+                background-color: #35a;
+                color: #fff;
+                flex-shrink: 0;
+                width: 100%;
+                position: relative;
+                transition-property: transform;
+                cursor: grab;
+            }
+        }
+        .example-hint, .example-hint:hover {
+            color: #7cf;
+        }
+        .example-description {
+            display: block;
+            min-height: 3.95em;
+            color: #ccc;
+        }
+        @media (min-width: 768px) {
+            .example-hint, .example-hint:hover {
+                color: #07c;
+            }
+            .example-description {
+                color: #777;
+            }
+        }
         .site-footer {
             background: rgb(30,20,0);
             padding: 15px 0;
             text-align: center;
         }
-        .site-footer a { color: #ccc; text-decoration: underline; }
+        .site-footer a {color: #ccc; text-decoration: underline; }
+        .bx-livechat-body {
+            background: #f5f6f7 !important;
+        }
+        .bx-livechat-copyright {
+            display: none !important;
+        }
+        .b24-form-wrapper {
+            background-color: transparent !important;
+        }
+        .b24-form-header-title {
+            margin-top: 3rem !important;
+            margin-bottom: 3rem !important;
+            font-size: calc(1.475rem + 2.7vw) !important;
+            font-weight: 300 !important;
+            line-height: 1.2 !important;
+            color: var(--bs-body-color) !important;
+            font-family: var(--bs-body-font-family) !important;
+        }
+        @media (min-width: 1200px) {
+            .b24-form-header-title {
+                font-size: 3.5rem !important;
+            }
+        }
+        .b24-form-recaptcha, .b24-form-sign {
+            display: none !important;
+        }
+        .b24-form-border-bottom {
+            border: none !important;
+        }
     </style>
 </head>
 <body>
@@ -29,106 +86,128 @@
 
     <header class="hero-bg py-5 text-white">
         <div class="container my-5 py-5">
-            <h1 class="display-4 fw-bold lh-base text-center my-5 py-5"><u>Программный код</u> сэкономит ваш<span class="typed"></span><br>защитит от человеческого фактора.<br>А я <u>напишу его для Вас</u></h1>
+            <h1 class="display-4 fw-bold lh-base text-center my-5 py-5"><u>Программный код</u> <nobr>сэкономит ваш<span class="typed"></span></nobr><br>защитит от человеческого фактора.<br>А я <u>напишу его для Вас</u></h1>
             <p class="text-end">Это моё рабочее место :)</p>
         </div>
     </header>
 
 
+    <div class="container overflow-hidden">
+        <h2 class="display-4 text-center mt-5 mb-md-5 py-5">Какие у Вас запросы?</h2>
+
+        <div class="swiper-examples">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-example-slide col-md-4 text-center mb-5 p-4 d-flex flex-column justify-content-between">
+                    <h2>Битрикс24</h2>
+                    <p class="small mb-0 example-description">настройка, интеграция с веб-приложениями штатными инструментами и по API</p>
+                    <button class="popper btn mx-auto example-hint" aria-describedby="popper1">
+                        примеры задач
+                        <svg class="header__icon-phone" width="20" height="20">
+                            <use xlink:href="#i_question"></use>
+                        </svg>
+                    </button>
+                    <div id="popper1" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
+                        <ul class="mb-0 ps-3">
+                            <li>отправка SMS по достижению стадии сделки в CRM</li>
+                            <li>звонки через стороннюю телефонию из интерфейса Битрикс24 с использованием гарнитуры</li>
+                            <li>информирование руководителю в Telegram о просроченной обработке лида менеджером</li>
+                            <li>отчёты с гибкой настройкой условий и формата, используя API Битрикс24</li>
+                            <li>бизнес-процесс согласования документов по иерархии</li>
+                            <li>бизнес-процесс трудоустройства и увольнения сотрудника с онлайн-обходным списком</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="swiper-example-slide col-md-4 text-center mb-5 p-4 d-flex flex-column justify-content-between">
+                    <h2>Парсинг</h2>
+                    <p class="small mb-0 example-description">однократное или регулярное получение информации с сайтов и веб-приложений в структурированном виде, дальнейшая обработка</p>
+                    <button class="popper btn mx-auto example-hint" aria-describedby="popper2">
+                        примеры задач
+                        <svg class="header__icon-phone" width="20" height="20">
+                            <use xlink:href="#i_question"></use>
+                        </svg>
+                    </button>
+                    <div id="popper2" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
+                        <ul class="mb-0 ps-3">
+                            <li>сбор товаров, оценок, отзывов о товаре с заранее определённого списка источников</li>
+                            <li>уведомления об изменениях на сайте. Например, при появлении нового товара/новости</li>
+                            <li>сбор данных из профилей пользователей, проголосовавших определённым образом в голосовании социальной сети</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="swiper-example-slide col-md-4 text-center mb-5 p-4 d-flex flex-column justify-content-between">
+                    <h2>Документы и таблицы</h2>
+                    <p class="small mb-0 example-description">разработка инструментов обработки/редактирования файлов .doc, .docx (Microsoft Word), .xls, .xlsx (Microsoft Excel), .pdf (Adobe Reader), .rtf, .txt, .json, .xml, .yml, других текстовых форматов</p>
+                    <button class="popper btn mx-auto example-hint" aria-describedby="popper3">
+                        примеры задач
+                        <svg class="header__icon-phone" width="20" height="20">
+                            <use xlink:href="#i_question"></use>
+                        </svg>
+                    </button>
+                    <div id="popper3" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
+                        <ul class="mb-0 ps-3">
+                            <li>сбор прайс-листов поставщика, формирование собственного прайс-листа с наценками в зависимости от типа товара</li>
+                            <li>добавление в CRM задач HR-специалисту о звонке кандидатам, чьи резюме пришли на почту</li>
+                            <li>формирование договора, счёта с печатью и подписью</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="swiper-example-slide col-md-4 text-center mb-5 p-4 d-flex flex-column justify-content-between">
+                    <h2>Интеграции</h2>
+                    <p class="small mb-0 example-description">в основном, работа с API веб-приложений с целью автоматизировать передачу информации и запуск действий веб-приложений по условию</p>
+                    <button class="popper btn mx-auto example-hint" aria-describedby="popper4">
+                        примеры задач
+                        <svg class="header__icon-phone" width="20" height="20">
+                            <use xlink:href="#i_question"></use>
+                        </svg>
+                    </button>
+                    <div id="popper4" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
+                        <ul class="mb-0 ps-3">
+                            <li>отправка заявки в службу доставки при переходе товара на определённую стадию учётной системы</li>
+                            <li>вывод ключевых показателей отдела для онлайн-мониторинга на экране в офисе</li>
+                            <li>публикация товаров или передача заявок на сайты партнёров</li>
+                            <li>разработка API и Webhook для партнёров, чтобы те могли мгновенно передавать заявки, цены, публиковать товары, другое</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="swiper-example-slide col-md-4 text-center mb-5 p-4 d-flex flex-column justify-content-between">
+                    <h2>Диагностика и правки</h2>
+                    <p class="small mb-0 example-description">исправление интерфейсных и функциональных недоработок сайтов и скриптов</p>
+                    <button class="popper btn mx-auto example-hint" aria-describedby="popper5">
+                        примеры задач
+                        <svg class="header__icon-phone" width="20" height="20">
+                            <use xlink:href="#i_question"></use>
+                        </svg>
+                    </button>
+                    <div id="popper5" class="card bg-dark text-white p-3 small text-start" style="max-width:100%" role="tooltip" hidden>
+                        <ul class="mb-0 ps-3">
+                            <li>исправление работы кнопок, полей ввода, форм, отображения текстов, цветов, другое</li>
+                            <li>оптимизация скорости загрузки сайта путём сжатия медиа файлов, размера кода, исключения неиспользуемого кода, кэширования</li>
+                            <li>установка счётчиков Яндекс.Метрики и Google Analytics, Google Tag Manager</li>
+                            <li>настройка веб-сервера, регулярных заданий, версий ПО (linux)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
     <div class="container">
-        <h2 class="display-4 text-center my-5 py-5">Какие у Вас запросы?</h2>
-
         <div class="row justify-content-center">
-
-            <div class="col-12 col-md-4 text-center mb-5">
-                <h2>Битрикс24</h2>
-                <p class="text-muted small mb-0">настройка, интеграция с веб-приложениями штатными инструментами и по API</p>
-                <button class="popper btn mx-auto" aria-describedby="popper1">
-                    примеры задач
-                    <svg class="header__icon-phone" width="20" height="20">
-                        <use xlink:href="#i_question"></use>
-                    </svg>
-                </button>
-                <div id="popper1" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
-                    <ul class="mb-0 ps-3">
-                        <li>отправка SMS по достижению стадии сделки в CRM</li>
-                        <li>звонки через стороннюю телефонию из интерфейса Битрикс24 с использованием гарнитуры</li>
-                        <li>информирование руководителю в Telegram о просроченной обработке лида менеджером</li>
-                        <li>отчёты с гибкой настройкой условий и формата, используя API Битрикс24</li>
-                        <li>бизнес-процесс согласования документов по иерархии</li>
-                        <li>бизнес-процесс трудоустройства и увольнения сотрудника с онлайн-обходным списком</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 text-center mb-5">
-                <h2>Парсинг</h2>
-                <p class="text-muted small mb-0">однократное или регулярное получение информации с сайтов и веб-приложений в структурированном виде, дальнейшая обработка</p>
-                <button class="popper btn mx-auto" aria-describedby="popper2">
-                    примеры задач
-                    <svg class="header__icon-phone" width="20" height="20">
-                        <use xlink:href="#i_question"></use>
-                    </svg>
-                </button>
-                <div id="popper2" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
-                    <ul class="mb-0 ps-3">
-                        <li>сбор товаров, оценок, отзывов о товаре с заранее определённого списка источников</li>
-                        <li>уведомления об изменениях на сайте. Например, при появлении нового товара/новости</li>
-                        <li>сбор данных из профилей пользователей, проголосовавших определённым образом в голосовании социальной сети</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 text-center mb-5">
-                <h2>Документы и таблицы</h2>
-                <p class="text-muted small mb-0">разработка инструментов обработки/редактирования файлов .doc, .docx (Microsoft Word), .xls, .xlsx (Microsoft Excel), .pdf (Adobe Reader), .rtf, .txt, .json, .xml, .yml, других текстовых форматов</p>
-                <button class="popper btn mx-auto" aria-describedby="popper3">
-                    примеры задач
-                    <svg class="header__icon-phone" width="20" height="20">
-                        <use xlink:href="#i_question"></use>
-                    </svg>
-                </button>
-                <div id="popper3" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
-                    <ul class="mb-0 ps-3">
-                        <li>сбор прайс-листов поставщика, формирование собственного прайс-листа с наценками в зависимости от типа товара</li>
-                        <li>добавление в CRM задач HR-специалисту о звонке кандидатам, чьи резюме пришли на почту</li>
-                        <li>формирование договора, счёта с печатью и подписью</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 text-center mb-5">
-                <h2>Интеграции</h2>
-                <p class="text-muted small mb-0">в основном, работа с API веб-приложений с целью автоматизировать передачу информации и запуск действий веб-приложений по условию</p>
-                <button class="popper btn mx-auto" aria-describedby="popper4">
-                    примеры задач
-                    <svg class="header__icon-phone" width="20" height="20">
-                        <use xlink:href="#i_question"></use>
-                    </svg>
-                </button>
-                <div id="popper4" class="card bg-dark text-white p-3 small text-start" role="tooltip" hidden>
-                    <ul class="mb-0 ps-3">
-                        <li>отправка заявки в службу доставки при переходе товара на определённую стадию учётной системы</li>
-                        <li>вывод ключевых показателей отдела для онлайн-мониторинга на экране в офисе</li>
-                        <li>публикация товаров или передача заявок на сайты партнёров</li>
-                        <li>разработка API и Webhook для партнёров, чтобы те могли мгновенно передавать заявки, цены, публиковать товары, другое</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 text-center mb-5">
-                <h2>Диагностика и правки</h2>
-                <p class="text-muted small mb-0">исправление интерфейсных и функциональных недоработок сайтов и скриптов</p>
-                <button class="popper btn mx-auto" aria-describedby="popper5">
-                    примеры задач
-                    <svg class="header__icon-phone" width="20" height="20">
-                        <use xlink:href="#i_question"></use>
-                    </svg>
-                </button>
-                <div id="popper5" class="card bg-dark text-white p-3 small text-start" style="max-width:100%" role="tooltip" hidden>
-                    <ul class="mb-0 ps-3">
-                        <li>исправление работы кнопок, полей ввода, форм, отображения текстов, цветов, другое</li>
-                        <li>оптимизация скорости загрузки сайта путём сжатия медиа файлов, размера кода, исключения неиспользуемого кода, кэширования</li>
-                        <li>установка счётчиков Яндекс.Метрики и Google Analytics, Google Tag Manager</li>
-                        <li>настройка веб-сервера, регулярных заданий, версий ПО (linux)</li>
-                    </ul>
-                </div>
+            <div class="col-md-5">
+                <script data-b24-form="inline/9/ek3w4z" data-skip-moving="true">
+                    (function(w,d,u){
+                        var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                        var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                    })(window,document,'https://cdn-ru.bitrix24.ru/b21056918/crm/form/loader_9.js');
+                </script>
             </div>
         </div>
     </div>
@@ -148,14 +227,29 @@
 -->
 
     <div class="container py-5 my-5">
-        <h2 class="display-3 text-center">Контакты</h2>
-        <div class="text-center">Валерий Гречуха</div>
-        <div class="text-center">
-            Telegram: <a href="#" id="tg">@loading</a>
-        </div>
-        <div class="text-center">
-            Профиль на <a href="https://uslugi.yandex.ru/profile/ValerijGrechukha-597017" target="_blank">Яндекс.Услугах</a>
-        </div>
+        <h2 class="display-3 text-center mb-5">Контакты</h2>
+        <p class="text-center">
+            <a id="eml" href="#" target="_blank" class="mx-2">
+                <svg width="40" height="40">
+                    <use xlink:href="#i_gmail"></use>
+                </svg>
+            </a>
+            <a id="tg" href="#" target="_blank" class="mx-2">
+                <svg width="40" height="40">
+                    <use xlink:href="#i_telegram"></use>
+                </svg>
+            </a>
+            <a href="https://github.com/vmrfriz" target="_blank" class="mx-2">
+                <svg width="40" height="40">
+                    <use xlink:href="#i_github"></use>
+                </svg>
+            </a>
+            <a href="https://uslugi.yandex.ru/profile/ValerijGrechukha-597017" target="_blank" class="mx-2">
+                <svg width="196" height="40">
+                    <use xlink:href="#i_yuslugi"></use>
+                </svg>
+            </a>
+        </p>
     </div>
 
 
@@ -170,6 +264,10 @@
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="i_question" viewBox="0 0 226 226"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,226v-226h226v226z" fill="none"></path><g><path d="M207.16667,113c0,51.99883 -42.16783,94.16667 -94.16667,94.16667c-51.99883,0 -94.16667,-42.16783 -94.16667,-94.16667c0,-51.99883 42.16783,-94.16667 94.16667,-94.16667c51.99883,0 94.16667,42.16783 94.16667,94.16667z" fill="#2196f3"></path><path d="M111.86058,146.64104c-3.42296,0 -6.25267,1.10175 -8.46088,3.34762c-2.20821,2.22704 -3.30996,5.05675 -3.30996,8.49854c0,3.38529 1.08292,6.18204 3.23933,8.38554c2.17054,2.20821 5.00496,3.30996 8.55033,3.30996c3.53125,0 6.36567,-1.10175 8.53621,-3.30996c2.15171,-2.20821 3.23933,-5.00496 3.23933,-8.38554c0,-3.43708 -1.10175,-6.2715 -3.30996,-8.49854c-2.19408,-2.20821 -5.085,-3.34762 -8.48442,-3.34762zM137.408,68.67575c-5.72062,-4.98613 -13.73892,-7.46742 -24.07842,-7.46742c-10.24533,0 -18.33896,2.63196 -24.25733,7.87233c-5.60762,4.96729 -8.588,11.78967 -8.95525,20.37767h-0.07533v4.70833h21.1875l0.03767,-3.30996c0.09417,-3.87967 1.23358,-6.93537 3.40412,-9.13887c2.15171,-2.22704 5.05675,-3.32879 8.66333,-3.32879c7.61338,0 11.40358,4.10096 11.40358,12.32171c0,2.72142 -0.71567,5.31571 -2.18937,7.75933c-1.45488,2.44833 -4.39758,5.62646 -8.80929,9.54379c-4.41642,3.8985 -7.44858,7.87233 -9.10592,11.89796c-1.67146,4.02562 -2.50012,9.82158 -2.50012,16.62512h18.73917l0.29662,-4.81662c0.53204,-4.76483 2.65079,-8.90346 6.36567,-12.45354l5.94192,-5.60762c4.61417,-4.46821 7.87233,-8.53621 9.71329,-12.19458c1.85979,-3.67721 2.79675,-7.57571 2.79675,-11.6955c-0.02825,-9.08238 -2.87679,-16.10721 -8.57858,-21.09333z" fill="#e3f2fd"></path></symbol>
+        <symbol id="i_yuslugi" viewBox="0 0 147 30"><rect width="28" height="28" rx="14" fill="#000"/><path d="M15.793 7.932H14.5c-2.371 0-3.619 1.201-3.619 2.972 0 2.002.862 2.942 2.633 4.143l1.463.985-4.204 6.283H7.632l3.773-5.62c-2.172-1.556-3.388-3.065-3.388-5.621 0-3.203 2.233-5.39 6.468-5.39h4.204V22.3h-2.896V7.932z" fill="#fff"/><path d="M67.346 25.259c.339.122.925.306 1.759.306 2.9 0 4.073-1.989 5.709-5.934L81.326 4h-3.488l-4.413 11.257L68.858 4H65l6.543 15.661c-.649 1.56-1.297 2.63-2.778 2.63-.679 0-1.11-.091-1.42-.213v3.18zM86.915 25.565c1.697 0 2.9-.306 3.796-.949V21.65c-.926.643-2.037 1.04-3.58 1.04-2.624 0-3.704-2.018-3.704-5.2 0-3.334 1.327-5.047 3.735-5.047 1.42 0 2.808.49 3.549.949V10.3c-.772-.428-2.13-.734-3.95-.734-4.691 0-7.13 3.334-7.13 8.014 0 5.139 2.377 7.984 7.284 7.984zM91.793 22.108v3.15s.586.307 1.45.307c3.148 0 3.95-2.203 4.136-7.31l.216-5.507h3.734v12.51h3.672V9.874H94.478l-.309 8.228c-.123 3.273-.34 4.283-1.543 4.283-.525 0-.833-.276-.833-.276zM110.071 30c3.426 0 4.691-2.416 5.741-5.567l4.845-14.56h-3.549l-3.426 11.562-3.425-11.562h-3.858l5.339 16.059c-.401.734-.988 1.193-2.006 1.193-.679 0-1.265-.214-1.667-.612v2.967s.556.52 2.006.52zM122.05 9.873v15.386h3.673v-12.51h5.678V9.872h-9.351zM133.563 9.873v15.386h3.179l5.678-9.513v9.513H146V9.873h-3.179l-5.678 9.513V9.873h-3.58z" fill="#000"/><circle cx="44" cy="14" r="14" fill="#242729"/><path d="M39.766 4.898a6.96 6.96 0 007.478 11.738l10.214-6.507A14.023 14.023 0 0046.961.314l-7.195 4.584z" fill="#FF9D7C"/><path d="M39.766 4.898a6.96 6.96 0 007.478 11.738l10.214-6.507A14.023 14.023 0 0046.961.314l-7.195 4.584z" fill="#FF6432"/><path d="M39.766 4.898a6.96 6.96 0 007.478 11.738l10.214-6.507A14.023 14.023 0 0046.961.314l-7.195 4.584z" fill="url(#paint0_radial)"/><path d="M39.766 4.898a6.96 6.96 0 007.478 11.738l10.214-6.507A14.023 14.023 0 0046.961.314l-7.195 4.584z" fill="url(#paint1_linear)"/><path d="M30.54 17.864l10.218-6.51a6.959 6.959 0 117.478 11.739l-7.207 4.591a14.023 14.023 0 01-10.489-9.82z" fill="#FFE66E"/><path d="M30.54 17.864l10.218-6.51a6.959 6.959 0 117.478 11.739l-7.207 4.591a14.023 14.023 0 01-10.489-9.82z" fill="url(#paint2_linear)"/><defs><linearGradient id="paint1_linear" x1="41.681" y1="15.902" x2="51.391" y2="-7.535" gradientUnits="userSpaceOnUse"><stop stop-color="#FF8140" stop-opacity="0"/><stop offset=".067" stop-color="#FF8140" stop-opacity=".01"/><stop offset=".133" stop-color="#FF8140" stop-opacity=".036"/><stop offset=".2" stop-color="#FF8140" stop-opacity=".082"/><stop offset=".267" stop-color="#FF8140" stop-opacity=".147"/><stop offset=".333" stop-color="#FF8140" stop-opacity=".232"/><stop offset=".4" stop-color="#FF8140" stop-opacity=".332"/><stop offset=".467" stop-color="#FF8140" stop-opacity=".443"/><stop offset=".533" stop-color="#FF8140" stop-opacity=".557"/><stop offset=".6" stop-color="#FF8140" stop-opacity=".668"/><stop offset=".667" stop-color="#FF8140" stop-opacity=".768"/><stop offset=".733" stop-color="#FF8140" stop-opacity=".853"/><stop offset=".8" stop-color="#FF8140" stop-opacity=".918"/><stop offset=".867" stop-color="#FF8140" stop-opacity=".964"/><stop offset=".933" stop-color="#FF8140" stop-opacity=".991"/><stop offset="1" stop-color="#FF8140"/></linearGradient><linearGradient id="paint2_linear" x1="42.098" y1="15.865" x2="32.87" y2="29.041" gradientUnits="userSpaceOnUse"><stop stop-color="#FFD750" stop-opacity="0"/><stop offset="1" stop-color="#FFD750"/></linearGradient><radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(13.75189 -9.58735 7.05554 10.12032 40.782 19.506)"><stop stop-color="#CC0700" stop-opacity=".97"/><stop offset=".067" stop-color="#CC0700" stop-opacity=".962"/><stop offset=".133" stop-color="#CC0700" stop-opacity=".936"/><stop offset=".2" stop-color="#CC0700" stop-opacity=".891"/><stop offset=".267" stop-color="#CC0700" stop-opacity=".827"/><stop offset=".333" stop-color="#CC0700" stop-opacity=".745"/><stop offset=".4" stop-color="#CC0700" stop-opacity=".648"/><stop offset=".467" stop-color="#CC0700" stop-opacity=".541"/><stop offset=".533" stop-color="#CC0700" stop-opacity=".429"/><stop offset=".6" stop-color="#CC0700" stop-opacity=".322"/><stop offset=".667" stop-color="#CC0700" stop-opacity=".225"/><stop offset=".733" stop-color="#CC0700" stop-opacity=".143"/><stop offset=".8" stop-color="#CC0700" stop-opacity=".079"/><stop offset=".867" stop-color="#CC0700" stop-opacity=".034"/><stop offset=".933" stop-color="#CC0700" stop-opacity=".01"/><stop offset="1" stop-color="#CC0700" stop-opacity="0"/></radialGradient></defs></symbol>
+        <symbol id="i_github" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></symbol>
+        <symbol id="i_telegram" viewBox="0 0 48 48"><path fill="#29b6f6" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"/><path fill="#fff" d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"/><path fill="#b0bec5" d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"/><path fill="#cfd8dc" d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"/></symbol>
+        <symbol id="i_gmail" viewBox="0 0 12031.384 8750.098"><defs id="defs77"><linearGradient id="linearGradient54"><stop style="stop-color:#cecece;stop-opacity:0.48" offset="0" id="stop50" /><stop style="stop-color:#eaeaea;stop-opacity:1" offset="1" id="stop52" /></linearGradient><filter style="color-interpolation-filters:sRGB" id="filter889" x="-0.031284049" width="1.0625681" y="-0.070104311" height="1.1402086"><feGaussianBlur stdDeviation="156.82933" id="feGaussianBlur891" /></filter><linearGradient xlink:href="#linearGradient54" id="linearGradient56" x1="4534.7222" y1="4135.5386" x2="7728.189" y2="4023.7678" gradientUnits="userSpaceOnUse" gradientTransform="translate(27.942915,19.948978)" /></defs><path fill="#d23f31" d="M 31.933915,823.14641 V 7932.6006 c 0,451.178 369.145005,820.321 820.322005,820.321 H 1399.1369 V 823.14641 Z" id="path24" /><path fill="#c53929" d="M 10696.116,823.14641 V 8752.9216 h 546.882 c 451.177,0 820.321,-369.144 820.321,-820.321 V 823.14641 Z" id="path26" /><path id="polygon18" style="fill:#eeeeee" d="M 1399.1379,8750.098 H 10696.116 V 2190.0193 L 6047.6269,5369.005 Z" /><path style="fill:url(#linearGradient56);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 299.38792,1441.0415 8486.63628,7305.0541 1910.0918,4.0024 13.972,-6558.5919 -4662.4611,3177.4989 z" id="path48" /><path style="fill:#e4e4e4;fill-opacity:1;stroke:#000000;stroke-width:0.98754px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 1399.1369,2401.7179 4648.49,2967.2871 -4648.489,3381.093 z" id="path44" /><path id="path44-2" style="fill:#d0d0d0;fill-opacity:1;stroke:none;stroke-width:0.99657px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 1417.0959,2175.5363 v 201.2676 l 3992.361,3456.5254 638.17,-464.3243 z" /><path fill="#db4437" d="M 11422.628,365.25781 6227.2596,3919.9847 1031.8896,365.25781 c -451.17699,0 -820.322,369.145 -820.322,820.32189 0,280.961 141.505,529.108 356.84001,676.766 L 6227.2596,5734.2627 11886.11,1862.3457 c 215.334,-147.658 356.84,-395.805 356.84,-676.766 0,-451.17689 -369.145,-820.32189 -820.322,-820.32189 z" id="path47-7" style="opacity:0.506329;fill:#808080;filter:url(#filter889)" /><path fill="#262626" fill-opacity="0.2" d="M 11244.992,8691.7865 H 854.25184 c -451.177,0 -820.322009,-369.144 -820.322009,-820.321 v 68.36 c 0,451.178 369.145009,820.321 820.322009,820.321 H 11244.992 c 451.177,0 820.321,-369.144 820.321,-820.321 v -68.36 c 0,451.177 -369.144,820.321 -820.321,820.321 z" id="path51" /><path fill="#3e2723" fill-opacity="0.25" d="M 11706.479,1428.727 6047.6269,5300.645 388.77492,1428.727 C 182.52192,1287.297 44.094915,1053.65 32.776915,787.30602 c -0.44,10.967 -0.842,21.946 -0.842,33.016 0,280.96098 141.505005,529.10798 356.840005,676.76598 L 6047.6269,5369.005 11706.479,1497.088 c 215.334,-147.658 356.84,-395.805 356.84,-676.76598 0,-11.07 -0.401,-22.048 -0.842,-33.015 -11.317,266.34298 -149.746,499.98998 -355.998,641.41998 z" id="path57" /><path id="path48-3" style="fill:#b0473e;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 299.38792,1441.0415 1395.1459,2389.7328 V 2189.809 Z" /><g id="g39"><path id="polygon59" style="fill:#f1f1f1" d="M 852.25692,-2.2248564e-5 6047.6269,3554.727 11242.997,-2.2248564e-5 Z" /><polygon fill="#262626" fill-opacity="0.02" points="920.128,68.36 11111.256,68.36 11211.062,0 820.322,0 " id="polygon61" style="fill:#4d4d4d" transform="translate(31.935,-2.2248564e-5)" /></g><metadata id="metadata40"><rdf:RDF><cc:Work rdf:about=""><dc:title></dc:title><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><g id="g35"><g id="g29"><path fill="#db4437" d="M 11242.997,-2.2248564e-5 6047.6269,3554.727 852.25692,-2.2248564e-5 C 401.07992,-2.2248564e-5 31.934915,369.14498 31.934915,820.32198 31.934915,1101.283 173.43992,1349.43 388.77492,1497.088 L 6047.6269,5369.005 11706.479,1497.088 c 215.334,-147.658 356.84,-395.805 356.84,-676.76602 0,-451.177 -369.145,-820.322002248564 -820.322,-820.322002248564 z" id="path47" /><path fill="#ffffff" fill-opacity="0.2" d="M 11242.997,-2.2248564e-5 11143.19,68.359988 h 99.807 c 451.177,0 820.321,369.145002 820.321,820.322002 v -68.36 c 0,-451.177 -369.144,-820.322012248564 -820.321,-820.322012248564 z" id="path53" style="fill:#4d4d4d" /></g><path fill="#ffffff" fill-opacity="0.2" d="m 852.25692,68.359988 h 99.806 L 852.25692,-2.2248564e-5 C 401.07992,-2.2248564e-5 31.934915,369.14499 31.934915,820.32199 v 68.36 c 0,-451.177 369.145005,-820.322002 820.322005,-820.322002 z" id="path55" style="fill:#4d4d4d" /></g></symbol>
     </svg>
 
 	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(78780816, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/78780816" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
@@ -177,13 +275,55 @@
     <script>
         let tg = document.getElementById('tg');
         if (tg) {
-            tg.href = 'tg:' + '//res' + 'olve?' + 'domain' + '=vm' + 'rfriz';
-            tg.innerText = 'vm' + 'rfri' + 'z';
+            tg.href = 'https' + ':/' + '/t' + '.m' + 'e/vmr' + 'friz';
+        }
+        let eml = document.getElementById('eml');
+        if (eml) {
+            eml.href = 'mai' + 'lto:' + 'info' + '@' + 'mrfriz' + '.' + 'ru';
         }
     </script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
+        function $(selector, context) {
+            return (context instanceof Node ? context : document).querySelector(selector);
+        }
+
+        function $$(selector, context) {
+            return (context instanceof Node ? context : document).querySelectorAll(selector);
+        }
+
+        (function (swiperExample) {
+            let swiperElement = $('.swiper-examples');
+            let swiperWrapper = $('.swiper-wrapper', swiperElement);
+
+            let init = function () {
+                swiperExample = new Swiper(swiperElement, {
+                    slideClass: 'swiper-example-slide',
+                    slidesPerView: 1.2,
+                    spaceBetween: 30,
+                    centeredSlides: true,
+                    autoplay: {}
+                });
+                swiperWrapper.classList.remove('row', 'justify-content-center');
+            }
+
+            let disable = function () {
+                if (swiperExample instanceof Swiper) {
+                    swiperExample.destroy();
+                }
+                swiperWrapper.classList.add('row', 'justify-content-center');
+            }
+
+            let run = function () {
+                window.innerWidth < 768 ? init() : disable();
+            }
+
+            window.addEventListener('resize', run);
+            run();
+        })();
+
         Array.from(document.getElementsByClassName('popper')).forEach(function (elem) {
             let tooltip = elem.nextElementSibling;
 
@@ -221,5 +361,7 @@
             loop: true
         });
     </script>
+    <!-- Bitrix24 Чат --><script>(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.ru/b21056918/crm/site_button/loader_1_c4baq1.js');</script>
+    <!-- Bitrix24 СА --><script>(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.ru/b21056918/crm/tag/call.tracker.js');</script>
 </body>
 </html>
